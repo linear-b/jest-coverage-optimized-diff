@@ -2053,9 +2053,7 @@ function run() {
                 }
                 return acc;
             }, initialAcc);
-            console.log({ codeCoverageNew });
-            console.log({ codeCoverageOld });
-            console.log({ codeCoverageOld });
+            delete resolvedOld.total;
             const currentDirectory = child_process_1.execSync('pwd')
                 .toString()
                 .trim();
