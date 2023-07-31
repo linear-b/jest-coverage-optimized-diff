@@ -47,6 +47,9 @@ async function run(): Promise<void> {
       },
       initialAcc
     )
+    console.log({codeCoverageNew})
+    console.log({codeCoverageOld})
+    console.log({codeCoverageOld})
     const currentDirectory = execSync('pwd')
       .toString()
       .trim()
