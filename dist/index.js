@@ -6773,7 +6773,7 @@ class DiffChecker {
         return returnStrings;
     }
     checkIfTestCoverageFallsBelowDelta(delta) {
-        console.log({ diffCoverageReport: this.diffCoverageReport });
+        console.log({ diffCoverageReport: JSON.stringify(this.diffCoverageReport) });
         const reportKeys = Object.keys(this.diffCoverageReport);
         for (const reportKey of reportKeys) {
             const diffCoverageData = this.diffCoverageReport[reportKey];
