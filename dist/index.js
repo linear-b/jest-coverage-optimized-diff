@@ -6773,9 +6773,10 @@ class DiffChecker {
         return returnStrings;
     }
     checkIfTestCoverageFallsBelowDelta(delta) {
-        const keys = Object.keys(this.diffCoverageReport);
-        for (const key of keys) {
-            const diffCoverageData = this.diffCoverageReport[key];
+        console.log({ diffCoverageReport: this.diffCoverageReport });
+        const reportKeys = Object.keys(this.diffCoverageReport);
+        for (const reportKey of reportKeys) {
+            const diffCoverageData = this.diffCoverageReport[reportKey];
             const keys = Object.keys(diffCoverageData);
             // No new coverage found so that means we deleted a file coverage
             const fileRemovedCoverage = Object.values(diffCoverageData).every(coverageData => coverageData.newPct === 0);
