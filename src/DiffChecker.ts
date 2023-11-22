@@ -68,9 +68,10 @@ export class DiffChecker {
   }
 
   checkIfTestCoverageFallsBelowDelta(delta: number): boolean {
-    const keys = Object.keys(this.diffCoverageReport)
-    for (const key of keys) {
-      const diffCoverageData = this.diffCoverageReport[key]
+    console.log({diffCoverageReport: this.diffCoverageReport})
+    const reportKeys = Object.keys(this.diffCoverageReport)
+    for (const reportKey of reportKeys) {
+      const diffCoverageData = this.diffCoverageReport[reportKey]
       const keys: ('lines' | 'statements' | 'branches' | 'functions')[] = <
         ('lines' | 'statements' | 'branches' | 'functions')[]
       >Object.keys(diffCoverageData)
